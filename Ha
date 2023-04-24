@@ -1,0 +1,104 @@
++---------------------+     +-----------------------+     +-------------------+
+|    Appointment      |     |   Patient Management   |     |    Billing/Payment |
++---------------------+     +-----------------------+     +-------------------+
+| -appointmentID: int |     | -patientID: int        |     | -paymentID: int   |
+| -date: date         |     | -firstName: string     |     | -patientID: int   |
+| -time: time         |     | -lastName: string      |     | -amount: float    |
+| -status: string     |     | -dob: date             |     | -date: date       |
+| -patientID: int     |     | -address: string       |     | -status: string   |
+| -dentistID: int     |     | -phone: string         |     +-------------------+
++---------------------+     | -email: string        |
+                             | -appointments: Appointment[] |
+                             +-----------------------+
+
+// Sample code for Appointment class
+class Appointment {
+  private int appointmentID;
+  private Date date;
+  private Time time;
+  private String status;
+  private int patientID;
+  private int dentistID;
+  
+  public Appointment(int appointmentID, Date date, Time time, String status, int patientID, int dentistID) {
+    this.appointmentID = appointmentID;
+    this.date = date;
+    this.time = time;
+    this.status = status;
+    this.patientID = patientID;
+    this.dentistID = dentistID;
+  } 
+  
+  // Getters and setters
+  
+}
+
+// Sample code for Patient Management class
+class PatientManagement {
+  private int patientID;
+  private String firstName;
+  private String lastName;
+  private Date dob;
+  private String address;
+  private String phone;
+  private String email;
+  private Appointment[] appointments;
+  
+  public PatientManagement(int patientID, String firstName, String lastName, Date dob, String address, String phone, String email, Appointment[] appointments) {
+    this.patientID = patientID;
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = dob;
+    this.address = address;
+    this.phone = phone;
+    this.email = email;
+    this.appointments = appointments;
+  }
+  
+  // Getters and setters
+  
+}
+
+// Sample code for Billing/Payment class
+class BillingPayment {
+  private int paymentID;
+  private int patientID;
+  private float amount;
+  private Date date;
+  private String status;
+  
+  public BillingPayment(int paymentID, int patientID, float amount, Date date, String status) {
+    this.paymentID = paymentID;
+    this.patientID = patientID;
+    this.amount = amount;
+    this.date = date;
+    this.status = status;
+  }
+  
+  // Getters and setters
+  
+}
+                                    |
+                                    |
+                        +------------------------------+
+                        |           Person             |
+                        +------------------------------+
+                        | -firstName: string           |
+                        | -lastName: string            |
+                        | -dob: date                   |
+                        | -address: string             |
+                        | -phone: string               |
+                        | -email: string               |
+                        +------------------------------+
+
+// Sample code for Person class
+class Person {
+  private String firstName;
+  private String lastName;
+  private Date dob;
+  private String address;
+  private String phone;
+  private String email;
+  
+  public Person(String firstName, String lastName, Date dob, String address, String phone, String email) {
+   
