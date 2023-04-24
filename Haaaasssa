@@ -1,0 +1,48 @@
++---------------------+     +-----------------------+     +-------------------+     +--------------+     +--------------+
+|    Appointment      |     |   Patient Management   |     |    Billing/Payment |     |   Login System |     |  Sign Up System |
++---------------------+     +-----------------------+     +-------------------+     +--------------+     +--------------+
+| -appointmentID: int |     | -patientID: int        |     | -paymentID: int   |     | -username: str |     | -username: str |
+| -date: date         |     | -firstName: string     |     | -patientID: int   |     | -password: str |     | -password: str |
+| -time: time         |     | -lastName: string      |     | -amount: float    |     +--------------+     +--------------+
+| -status: string     |     | -dob: date             |     | -date: date       |                             | -firstName: str |
+| -patientID: int     |     | -address: string       |     | -status: string   |                             | -lastName: str  |
+| -dentistID: int     |     | -phone: string         |     +-------------------+                             | -dob: date      |
++---------------------+     | -email: string        |                                                         | -address: str   |
+                             | -appointments: Appointment[] |                                                  | -phone: str     |
+                             +-----------------------+                                                  | -email: str     |
+                                                                                                             +----------------+
+
+// Sample code for Appointment class
+class Appointment {
+  private int appointmentID;
+  private Date date;
+  private Time time;
+  private String status;
+  private int patientID;
+  private int dentistID;
+  
+  public Appointment(int appointmentID, Date date, Time time, String status, int patientID, int dentistID) {
+    this.appointmentID = appointmentID;
+    this.date = date;
+    this.time = time;
+    this.status = status;
+    this.patientID = patientID;
+    this.dentistID = dentistID;
+  }
+  
+  // Getters and setters
+  
+}
+
+// Sample code for Patient Management class
+class PatientManagement {
+  private int patientID;
+  private String firstName;
+  private String lastName;
+  private Date dob;
+  private String address;
+  private String phone;
+  private String email;
+  private Appointment[] appointments;
+  
+  public PatientManagement(int patientID, String firstName, String lastName, Date dob,
